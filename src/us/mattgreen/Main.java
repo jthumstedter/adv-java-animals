@@ -8,12 +8,11 @@ public class Main {
     private final static FileInput inFile = new FileInput("animals.txt");
 
     public static void main(String[] args) {
-        ArrayList<Talkable> zoo = new ArrayList<>();
+        ArrayList<Talkable> zoo;
 
         // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
+        InputGathering ig = new InputGathering();
+        zoo = ig.GenerateData();
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
